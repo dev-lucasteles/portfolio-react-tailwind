@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        'custom': ['Poppins', 'sans-serif'],
+      },
       keyframes: {
         typewriter: {
           to: { left: '100%' },

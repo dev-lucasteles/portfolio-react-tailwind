@@ -2,6 +2,7 @@ import React from 'react';
 import CardsTech from './card-tecnologias';
 import FadeInSection from './FadeInSection';
 
+
 const cardsTech = [
   {
     img: "/public/assets/tecnologias/html5.png",
