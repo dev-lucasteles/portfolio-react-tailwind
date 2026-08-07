@@ -2,7 +2,7 @@ import React from 'react';
 import CardsTech from './card-tecnologias';
 import FadeInSection from './FadeInSection';
 
-const cardsTech = [
+const cardsExp = [
   {
     img: "/public/assets/tecnologias/html5.png",
     alt: "html5",
@@ -32,19 +32,19 @@ const cardsTech = [
 ];
 
 
-export default function Tecnologias() {
+export default function Experiencias() {
 
     return (
-      <section id="tecnologias" className="bg-gray-950 py-20 ">
+      <section id="experiencias" className="bg-gray-950 py-20 ">
         <FadeInSection>
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-2 animate-blurred-fade-in">Tecnologias</h1> {/*[cite: 1] */}
+          <h1 className="text-4xl font-bold text-white mb-2 animate-blurred-fade-in">Experiências</h1> {/*[cite: 1] */}
           <h2 className="text-lg text-red-400 font-medium animate-blurred-fade-in">Essas são as tecnologias que eu tenho conhecimento:</h2> {/*[cite: 1] */}
         </div>
         <div className="flex-col items-center space-y-8" >
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-            {cardsTech.map((card, index) => (
-                <CardsTech
+            {cardsExp.map((card, index) => (
+                <CardsExp
                   key={card.title}
                   title={card.title}
                   img={card.img}

@@ -5,6 +5,7 @@ import Sobre from './components/Sobre';
 import Tecnologias from './components/Tecnologias';
 import Projetos from './components/Projetos';
 import Rodape from './components/rodape';
+import Experiencias from './components/experiencias';
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-{#000000} text-gray-800 font-sans selection:bg-blue-200">
@@ -13,6 +14,7 @@ export default function Portfolio() {
       <Sobre />
       <Tecnologias />
       <Projetos />
+      <Experiencias />
       <Rodape />
     </div>
   );

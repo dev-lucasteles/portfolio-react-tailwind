@@ -6,10 +6,10 @@ export default function Header() {
 
     return (
         <header className="bg-white shadow-md sticky top-0 z-50">
-            <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div className="max-w-7xl px-4 py-4 flex justify-between items-center">
                 {/* Logo */}
-                <div className="flex-shrink-0">
-                    <img src="https://storage.googleapis.com/ecdt-logos/12186635000104/mais_assistencial_12186635.webp" alt="logo" className="h-10 w-10 object-contain" />
+                <div className="flex-shrink-0 text-xl border-b-4 border-transparent transition-colors duration-300 hover:border-[#7d0000] font-medium hover:text-[#7d0000] transition-colors items-left">
+                    <h2 class="#sobre-mim">Lucas Teles de Sousa</h2>
                 </div>
 
                 {/* Botão Mobile */}
@@ -28,6 +28,7 @@ export default function Header() {
                     <a href="#sobre-mim" className="text-xl border-b-4 border-transparent transition-colors duration-300 hover:border-[#7d0000] font-medium hover:text-[#7d0000] transition-colors">Sobre</a>
                     <a href="#tecnologias" className="text-xl border-b-4 border-transparent transition-colors duration-300 hover:border-[#7d0000] font-medium hover:text-[#7d0000] transition-colors">Tecnologias</a>
                     <a href="#projetos" className="text-xl border-b-4 border-transparent transition-colors duration-300 hover:border-[#7d0000] font-medium hover:text-[#7d0000] transition-colors">Projetos</a>
+                    <a href="#experiencias" className="text-xl border-b-4 border-transparent transition-colors duration-300 hover:border-[#7d0000] font-medium hover:text-[#7d0000] transition-colors">Experiências</a>
                     <a href="#rodape" className="text-xl border-b-4 border-transparent transition-colors duration-300 hover:border-[#7d0000] font-medium hover:text-[#7d0000] transition-colors">Contatos</a>
                 </nav>
             </div>
@@ -38,6 +39,7 @@ export default function Header() {
                     <a href="#sobre-mim" onClick={() => setIsMenuOpen(false)} className="hover:text-red-600">Sobre</a>
                     <a href="#tecnologias" onClick={() => setIsMenuOpen(false)} className="hover:text-red-600">Tecnologias</a>
                     <a href="#projetos" onClick={() => setIsMenuOpen(false)} className="hover:text-red-600">Projetos</a>
+                    <a href="#experiencias" onClick={() => setIsMenuOpen(false)} className="hover:text-red-600">Experiências</a>
                     <a href="#rodape" onClick={() => setIsMenuOpen(false)} className="hover:text-red-600">Contatos</a>
                 </div>
             )}
