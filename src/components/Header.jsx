@@ -13,7 +13,7 @@ export default function Header() {
                 </div>
 
                 {/* Botão Mobile */}
-                <button 
+                <button
                     className="md:hidden p-2 text-gray-600 focus:outline-none"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >

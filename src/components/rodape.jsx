@@ -4,28 +4,28 @@ import FadeInSection from './FadeInSection';
 
 const cardsContatos = [
   {
-    img: "/public/assets/sociais/telefone.png",
+    img: "assets/sociais/telefone.png",
     alt: "telefone",
     topico: "Telefone",
     contato: "22 99915-1985",
     link: "https://api.whatsapp.com/send?phone=5522999151985"
   },
   {
-    img: "/public/assets/sociais/github.png",
+    img: "/assets/sociais/github.png",
     alt: "github",
     topico: "Github",
     contato: "dev-lucasteles",
     link: "https://github.com/dev-lucasteles"
   },
   {
-    img: "/public/assets/sociais/email.png",
+    img: "/assets/sociais/email.png",
     alt: "email",
     topico: "E-mail",
     contato: "lucas.teles@gruporiomais.com.br",
     link: "mailto:lucas.teles@gruporiomais.com.br"
   },
   {
-    img: "/public/assets/sociais/linkedin.png",
+    img: "/assets/sociais/linkedin.png",
     alt: "linkedin",
     topico: "Linked-In",
     contato: "@lucas-teles-rj",
