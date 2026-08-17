@@ -5,27 +5,27 @@ import FadeInSection from './FadeInSection';
 
 const cardsTech = [
   {
-    img: "/public/assets/tecnologias/html5.png",
+    img: "/assets/tecnologias/html5.png",
     alt: "html5",
     title: "HTML5",
   },
   {
-    img: "/public/assets/tecnologias/css3.png",
+    img: "/assets/tecnologias/css3.png",
     alt: "css3",
     title: "CSS3",
   },
   {
-    img: "/public/assets/tecnologias/javascript.png",
+    img: "/assets/tecnologias/javascript.png",
     alt: "javascript",
     title: "JavaScript",
   },
   {
-    img: "/public/assets/tecnologias/java.png",
+    img: "/assets/tecnologias/java.png",
     alt: "java",
     title: "Java",
   },
   {
-    img: "/public/assets/tecnologias/Python.png",
+    img: "/assets/tecnologias/Python.png",
     alt: "python",
     title: "Python",
   }
