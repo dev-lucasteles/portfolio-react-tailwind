@@ -46,7 +46,7 @@ export default function Apresentacao() {
 
     <div className="flex-1 flex justify-center md:justify-end items-center">
       <img
-        src="/public/assets/perfil-lucas.jpg"
+        src="/assets/perfil-lucas.jpg"
         alt="lucas-perfil"
         className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-xl border-4 border-white" 
       />

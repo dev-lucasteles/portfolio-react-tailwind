@@ -11,14 +11,14 @@ const cards = [
     link: "https://github.com/dev-lucasteles/cadastro-usuario-CRUD"
   },
   {
-    img: "",
+    img: "/assets/projetos/totemMais.png",
     alt: "projeto2",
     title: "Totem de suporte",
     subtitle: "Totem de atendimento para abertura de chamados desenvolvido em Java com o framework Spring Boot, utilizando o banco de dados MySQL.",
     link: "https://github.com/dev-lucasteles/totem-autoatendimento"
   },
   {
-    img: "",
+    img: "/assets/projetos/gerenciadorDeEstoque.png",
     alt: "projeto3",
     title: "Sistema de gerenciamento de materiais",
     subtitle: "Sistema CRUD desenvolvido em Python com o framework matplotlib, numpy e banco de dados SQLite3.",
