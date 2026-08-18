@@ -12,7 +12,7 @@ export default function CardsProjetos({img, alt, title, subtitle, link }) {
             <img
                 src={img}
                 alt={alt}
-                className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 p-6 opacity-100 transition-opacity duration-300 group-hover:bg-black/50">
                 <h3 className="text-center text-2xl font-bold text-white shadow-black drop-shadow-md">
