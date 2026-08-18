@@ -31,37 +31,37 @@ const cardsContatos = [
     contato: "@lucas-teles-rj",
     link: "https://www.linkedin.com/in/lucas-teles-rj/"
   },
-  ]
+];
 
 export default function Rodape() {
-
-    return (
-    <footer id="rodape" className="py-20 bg-gray-950">
+  return (
+    <footer id="rodape" className="bg-gray-950 py-12 md:py-20">
       <FadeInSection>
-      <div className= "max-w-5xl mx-auto px-4">
-      <div className="text-center mb-40">
-          <h1 className="text-5xl font-bold text-white mb-2 ">Contatos</h1> {/*[cite: 1] */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          {/* Cabeçalho */}
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
+              Contatos
+            </h1>
+          </div>
+
+          {/* Cards de Contato */}
+          <div className="flex flex-wrap justify-center items-stretch gap-6 sm:gap-8 md:gap-10">
+            {cardsContatos.map((card) => (
+              <CardsContatos
+                key={card.topico}
+                topico={card.topico}
+                img={card.img}
+                alt={card.alt}
+                contato={card.contato}
+                link={card.link}
+              />
+            ))}
+          </div>
+
         </div>
-      </div>
-      <div className="mx-auto max-w-4xl flex-col justify-center space-y-12" >
-                <div className="flex flex-wrap justify-center md:gap-1">
-                  {cardsContatos.map((card) => (
-                      <CardsContatos
-                        key={card.topico}
-                        topico={card.topico}
-                        img={card.img}
-                        alt={card.alt}
-                        contato={card.contato}
-                        link={card.link}
-                        />
-                      ))}
-                </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-              </div>
-        </FadeInSection>     
-</footer>
-    );
+      </FadeInSection>
+    </footer>
+  );
 }

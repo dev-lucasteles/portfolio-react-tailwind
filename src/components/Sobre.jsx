@@ -2,24 +2,31 @@ import React from 'react';
 import FadeInSection from './FadeInSection';
 
 export default function Sobre() {
-
-    return (
-    <section id="sobre-mim" className="bg-gray-950 py-20">
+  return (
+    <section id="sobre-mim" className="bg-gray-950 py-12 md:py-20">
       <FadeInSection>
-        <div className="max-w-6xl mx-auto px-3">
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-white mb-2">Sobre mim</h1> {/*[cite: 1] */}
-            <h2 className="text-lg text-red-400 font-medium">Desenvolvedor  web iniciante</h2> {/*[cite: 1] */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          {/* Cabeçalho */}
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Sobre mim</h1>
+            <h2 className="text-base sm:text-lg text-red-400 font-medium">Desenvolvedor web iniciante</h2>
           </div>
-          <div className="mx-auto space-y-3 text-white leading-none text-lg text-justify md:text-left ">
-            <p className = "w-200 mx-auto gap-8 font-sans text-justify text-2xl text-normal text-white">
-              Sou estudante de Engenharia de Software e atuo na área de Suporte de TI.<br/>
-              Possuo experiência prática com infraestrutura, redes e troubleshooting, combinada a conhecimentos em programação com Java, Python, HTML, CSS, JavaScript e MySQL.<br/>
+
+          {/* Conteúdo de Texto */}
+          <div className="space-y-4 text-gray-300 font-sans text-base sm:text-lg md:text-xl leading-relaxed text-center sm:text-left">
+            <p>
+              Sou estudante de Engenharia de Software e atuo na área de Suporte de TI.
+            </p>
+            <p>
+              Possuo experiência prática com infraestrutura, redes e troubleshooting, combinada a conhecimentos em programação com Java, Python, HTML, CSS, JavaScript e MySQL.
+            </p>
+            <p>
               Sou focado na resolução de problemas e busco aplicar minha base operacional para evoluir no desenvolvimento de software.
-              </p>
-            </div>
+            </p>
           </div>
-        </FadeInSection>
-      </section>
-    );
+
+        </div>
+      </FadeInSection>
+    </section>
+  );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import CardsTech from './card-tecnologias';
 import FadeInSection from './FadeInSection';
 
-
 const cardsTech = [
   {
     img: "/assets/tecnologias/html5.png",
@@ -29,32 +28,37 @@ const cardsTech = [
     alt: "python",
     title: "Python",
   }
-  
 ];
 
-
 export default function Tecnologias() {
-
-    return (
-      <section id="tecnologias" className="bg-gray-950 py-20 ">
-        <FadeInSection>
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-2 animate-blurred-fade-in">Tecnologias</h1> {/*[cite: 1] */}
-          <h2 className="text-lg text-red-400 font-medium animate-blurred-fade-in">Essas são as tecnologias que eu tenho conhecimento:</h2> {/*[cite: 1] */}
-        </div>
-        <div className="flex-col items-center space-y-8" >
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-            {cardsTech.map((card, index) => (
-                <CardsTech
-                  key={card.title}
-                  title={card.title}
-                  img={card.img}
-                  alt={card.alt}
-                  />
-                ))}
+  return (
+    <section id="tecnologias" className="bg-gray-950 py-12 md:py-20">
+      <FadeInSection>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Cabeçalho */}
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 animate-blurred-fade-in">
+              Tecnologias
+            </h1>
+            <h2 className="text-base sm:text-lg text-red-400 font-medium animate-blurred-fade-in px-2">
+              Essas são as tecnologias que eu tenho conhecimento:
+            </h2>
           </div>
+
+          {/* Grid/Flex dos Cards */}
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12">
+            {cardsTech.map((card) => (
+              <CardsTech
+                key={card.title}
+                title={card.title}
+                img={card.img}
+                alt={card.alt}
+              />
+            ))}
+          </div>
+
         </div>
-        </FadeInSection>
-      </section>
-    );
+      </FadeInSection>
+    </section>
+  );
 }

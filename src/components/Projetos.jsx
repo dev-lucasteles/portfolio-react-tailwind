@@ -27,32 +27,35 @@ const cards = [
 ];
 
 export default function Projetos() {
-    return (
-    <section id="projetos" className="py-20 bg-gray-950">
+  return (
+    <section id="projetos" className="bg-gray-950 py-12 md:py-20">
       <FadeInSection>
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-2">Projetos</h1>
-            <h2 className="text-lg text-red-400 font-medium">Esses são os projetos que eu estou desenvolvendo:</h2>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          {/* Cabeçalho */}
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Projetos</h1>
+            <h2 className="text-base sm:text-lg text-red-400 font-medium px-2">
+              Esses são os projetos que eu estou desenvolvendo:
+            </h2>
           </div>
-          <div className="bg-gray-950 rounded-2xl">
-            <div className="mx-auto max-w-full">
-            <div className="content-center grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3">
-                {cards.map((card) => (
-                    <CardsProjetos
-                        key={card.title}
-                        title={card.title}
-                        img={card.img}
-                        alt={card.alt}
-                        subtitle={card.subtitle}
-                        link={card.link}
-                    />
-                ))}
-              </div>
-            </div>
+
+          {/* Grid dos Cards de Projetos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 items-stretch justify-items-center">
+            {cards.map((card) => (
+              <CardsProjetos
+                key={card.title}
+                title={card.title}
+                img={card.img}
+                alt={card.alt}
+                subtitle={card.subtitle}
+                link={card.link}
+              />
+            ))}
           </div>
+
         </div>
-        </FadeInSection>
-      </section>
-    );
+      </FadeInSection>
+    </section>
+  );
 }
