@@ -8,7 +8,7 @@ import Rodape from './components/Rodape';
 import Experiencias from './components/Experiencias';
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-[#000000] text-gray-800 font-sans selection:bg-blue-200">
+    <p className="selection:bg-gray-300 selection:text-black font-sans text-xl text-gray-300">
       <Header />
       <Apresentacao />
       <Sobre />
