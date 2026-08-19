@@ -7,25 +7,28 @@ const cards = [
     img: "",
     alt: "projeto1",
     title: "Cadastro Usuário - CRUD",
-    subtitle: "API RESTful simples para gerenciamento de usuários...",
-    description: "Cadastro Usuário é uma aplicação desenvolvida para gerenciar dados de forma simples e eficiente. Obtendo dados em tempo real, permite a criação, leitura, atualização e exclusão de usuários com total segurança.",
+    subtitle: "API RESTful simples para gerenciamento de usuários, desenvolvida em Java com o framework Spring Boot",
+    description: "Uma API RESTful completa para o gerenciamento de usuários. Permite realizar as operações de CRUD (Create, Read, Update, Delete) de forma segura e estruturada.",
     tools: [
       "Java",
       "Spring Boot",
-      "MySQL",
-      "JPA / Hibernate",
-      "Postman"
+      "API RESTful",
+      "Postman (Testes de API)"
     ],
-    date: "10 de Janeiro de 2024",
-    linkProjeto: "https://seu-link-do-projeto.com",
-    linkRepo: "https://github.com/dev-lucasteles/cadastro-usuario-CRUD",
-    linkLinkedin: "https://linkedin.com/in/seu-perfil"
+    linkRepo: "https://github.com/dev-lucasteles/cadastro-usuario-CRUD"
   },
   {
     img: "/assets/projetos/totemMais.png",
     alt: "projeto2",
     title: "Totem de suporte",
     subtitle: "Totem de atendimento para abertura de chamados desenvolvido em Java com o framework Spring Boot, utilizando o banco de dados MySQL.",
+    description: "Sistema focado no autoatendimento corporativo ou cliente final, permitindo a abertura e acompanhamento de chamados de suporte técnico diretamente por um totem interativo.",
+    tools: [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "JPA / Hibernate"
+    ],
     linkRepo: "https://github.com/dev-lucasteles/totem-autoatendimento"
   },
   {
@@ -33,6 +36,13 @@ const cards = [
     alt: "projeto3",
     title: "Sistema de gerenciamento de materiais",
     subtitle: "Sistema CRUD desenvolvido em Python com o framework matplotlib, numpy e banco de dados SQLite3.",
+    description: "Aplicação desktop/terminal voltada para a gestão e controle de estoque de materiais. Conta com visualização de dados e armazenamento local leve.",
+    tools: [
+      "Python",
+      "Matplotlib",
+      "Numpy",
+      "SQLite3"
+    ],
     linkRepo: "https://github.com/dev-lucasteles/sistema-gerenciamento-de-materiais"
   }
 ];
@@ -67,7 +77,7 @@ export default function Projetos() {
         </div>
       </FadeInSection>
 
-      {/* NOVA ESTRUTURA DO MODAL */}
+      {/* MODAL */}
       {projetoSelecionado && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm transition-opacity overflow-y-auto"
@@ -89,7 +99,6 @@ export default function Projetos() {
               </svg>
             </button>
 
-            {/* COLUNA ESQUERDA: Imagem e Botões */}
             <div className="w-full md:w-3/5 flex flex-col">
               {/* Imagem do Projeto */}
               <div className="w-full bg-gray-800 rounded-md overflow-hidden min-h-[250px] mb-6 flex items-center justify-center">
@@ -108,19 +117,19 @@ export default function Projetos() {
               <div className="flex flex-wrap gap-3 mt-auto">
                 {projetoSelecionado.linkProjeto && (
                   <a href={projetoSelecionado.linkProjeto} target="_blank" rel="noopener noreferrer" 
-                     className="bg-[#552c92] hover:bg-[#6b3bb8] text-white text-sm font-semibold py-2.5 px-4 rounded-md transition-colors text-center flex-grow sm:flex-grow-0">
+                    className="bg-[#552c92] hover:bg-[#6b3bb8] text-white text-sm font-semibold py-2.5 px-4 rounded-md transition-colors text-center flex-grow sm:flex-grow-0">
                     Acessar projeto
                   </a>
                 )}
                 {projetoSelecionado.linkRepo && (
                   <a href={projetoSelecionado.linkRepo} target="_blank" rel="noopener noreferrer" 
-                     className="bg-[#552c92] hover:bg-[#6b3bb8] text-white text-sm font-semibold py-2.5 px-4 rounded-md transition-colors text-center flex-grow sm:flex-grow-0">
+                    className="bg-red-700 hover:bg-red-400 text-white text-sm font-semibold py-2.5 px-4 rounded-md transition-colors text-center flex-grow sm:flex-grow-0">
                     Acessar repositório
                   </a>
                 )}
                 {projetoSelecionado.linkLinkedin && (
                   <a href={projetoSelecionado.linkLinkedin} target="_blank" rel="noopener noreferrer" 
-                     className="bg-[#552c92] hover:bg-[#6b3bb8] text-white text-sm font-semibold py-2.5 px-4 rounded-md transition-colors text-center flex-grow sm:flex-grow-0">
+                    className="bg-[#552c92] hover:bg-[#6b3bb8] text-white text-sm font-semibold py-2.5 px-4 rounded-md transition-colors text-center flex-grow sm:flex-grow-0">
                     Ver post no Linkedin
                   </a>
                 )}
@@ -129,7 +138,7 @@ export default function Projetos() {
 
             {/* COLUNA DIREITA: Textos e Tecnologias */}
             <div className="w-full md:w-2/5 flex flex-col pt-2 md:pt-0">
-              <h3 className="text-3xl font-bold text-[#9f7aea] mb-4 pr-6">
+              <h3 className="text-3xl font-bold text-red-700 mb-4 pr-6">
                 {projetoSelecionado.title}
               </h3>
               
@@ -148,8 +157,8 @@ export default function Projetos() {
                   ))
                 ) : (
                   <li>• Ferramentas não detalhadas</li>
-                )}
-              </ul>
+                )}  
+</ul>
 
               {/* Data do projeto */}
               {projetoSelecionado.date && (
