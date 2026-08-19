@@ -1,12 +1,10 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-export default function CardsProjetos({img, alt, title, subtitle, link }) {
+export default function CardsProjetos({ img, alt, title, subtitle, onClick }) {
     return (
-        <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div
+            onClick={onClick}
             className="w-80 h-60 group relative flex cursor-pointer flex-col overflow-hidden rounded-xl border-b-4 border-red-500 bg-gray-700 shadow-lg transition-transform hover:-translate-y-1"
         >
             <img
@@ -22,6 +20,6 @@ export default function CardsProjetos({img, alt, title, subtitle, link }) {
                     {subtitle}
                 </p>
             </div>
-        </a>
+        </div>
     );
 }

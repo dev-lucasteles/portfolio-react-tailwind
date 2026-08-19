@@ -27,6 +27,11 @@ const cards = [
 ];
 
 export default function Projetos() {
+
+  const [projetoSelecionado, setProjetoSelecionado] = useState(null);
+
+  const fecharModal = () => setProjetoSelecionado(null);
+
   return (
     <section id="projetos" className="bg-gray-950 py-12 md:py-20">
       <FadeInSection>
@@ -49,13 +54,63 @@ export default function Projetos() {
                 img={card.img}
                 alt={card.alt}
                 subtitle={card.subtitle}
-                link={card.link}
+                onClick={() => setProjetoSelecionado(card)}
               />
             ))}
           </div>
-
         </div>
       </FadeInSection>
+      {/* 
+        Layer / Modal
+      */}
+      {projetoSelecionado && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm transition-opacity"
+          onClick={fecharModal}
+        >
+          <div 
+            className="relative w-full max-w-2xl rounded-2xl bg-gray-800 p-6 sm:p-8 shadow-2xl border border-gray-700"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Botão de Fechar */}
+            <button
+              onClick={fecharModal}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+              aria-label="Fechar modal"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="flex flex-col items-center">
+              {projetoSelecionado.img && (
+                <img
+                  src={projetoSelecionado.img}
+                  alt={projetoSelecionado.alt}
+                  className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6 shadow-md"
+                />
+              )}
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
+                {projetoSelecionado.title}
+              </h3>
+              <p className="text-gray-300 text-center mb-8">
+                {projetoSelecionado.subtitle}
+              </p>
+              
+              {/* Botão com o link o projeto */}
+              <a
+                href={projetoSelecionado.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-red-500/30"
+              >
+                Acessar Repositório
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
