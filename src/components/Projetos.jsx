@@ -4,7 +4,7 @@ import FadeInSection from './FadeInSection';
 
 const cards = [
   {
-    img: "",
+    img: "/assets/projetos/cadastroCRUD.png",
     alt: "projeto1",
     title: "Cadastro Usuário - CRUD",
     subtitle: "API RESTful simples para gerenciamento de usuários, desenvolvida em Java com o framework Spring Boot",
