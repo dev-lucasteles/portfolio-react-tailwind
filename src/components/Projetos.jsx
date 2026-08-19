@@ -158,16 +158,8 @@ export default function Projetos() {
                 ) : (
                   <li>• Ferramentas não detalhadas</li>
                 )}  
-</ul>
-
-              {/* Data do projeto */}
-              {projetoSelecionado.date && (
-                <span className="text-[#9f7aea] text-sm font-medium mt-auto">
-                  {projetoSelecionado.date}
-                </span>
-              )}
+                </ul>
             </div>
-
           </div>
         </div>
       )}
