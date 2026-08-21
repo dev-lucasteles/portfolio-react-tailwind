@@ -29,11 +29,9 @@ export default function Apresentacao() {
                   sequence={[
                     'Estagiário de T.I',
                     1000,
-                    'Suporte de T.I',
-                    1000,
                     'Desenvolvedor',
                     1000,
-                    'Recreador',
+                    'Suporte de T.I',
                     1000,
                   ]}
                   wrapper="span"
